@@ -1,0 +1,12 @@
+services:
+  ecodms:
+    image: ecodms/ecodms
+    ports:
+      - 17001:17001
+      - 17004:8080 
+      - 17005:8180
+    volumes:
+      - /volume2/docker/ecoDMS/data:/srv/data:rw
+      - /volume2/docker/ecoDMS/scaninput:/srv/scaninput 
+      - /volume2/docker/ecoDMS/backup:/srv/backup  
+      - /volume2/docker/ecoDMS/restore:/srv/restore
